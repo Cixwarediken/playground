@@ -6,7 +6,7 @@
             return $record['gender']=='female';
         });
         if (count($filter)>0){
-            $Aye(array_values($filter));
+            $Aye (array_filter($filter)) ;
         }
         else
         {
@@ -22,7 +22,10 @@
         }, $females);
 
     echo 'Holiday is granted for :';
-    print_r ($names);
+    foreach($names as $name){
+        echo $name;
+    }
+    
     }
     function noholiday()
     {
